@@ -1,0 +1,7 @@
+<h2>My Reports</h2>
+<ul class="reports">
+  <li *ngFor="let report of reports" [class.selected]="report===selectedReport" (click)="onSelect(report)">
+    <span class="badge">{{report.id}}</span> {{report.name}}
+  </li>
+</ul>
+<app-report-detail [report]="selectedReport"></app-report-detail>
